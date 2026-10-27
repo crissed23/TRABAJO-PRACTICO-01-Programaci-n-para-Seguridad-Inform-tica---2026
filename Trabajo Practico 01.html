@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Práctico N.º 1 - PowerShell</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --text-color: #c9d1d9;
+            --accent-color: #58a6ff;
+            --border-color: #30363d;
+            --code-bg: #010409;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 40px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+        }
+        h1 {
+            font-size: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+            color: #ffffff;
+        }
+        .metadata {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+            background: var(--code-bg);
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+        .metadata p {
+            margin: 5px 0;
+        }
+        .section-title {
+            font-size: 1.1rem;
+            margin-top: 25px;
+            color: var(--accent-color);
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        code {
+            font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+            background-color: var(--code-bg);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #ff7b72;
+            border: 1px solid var(--border-color);
+        }
+        .btn-container {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            background-color: #238636;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            transition: background-color 0.2s;
+            border: 1px solid rgba(27,31,35,0.15);
+        }
+        .btn:hover {
+            background-color: #2ea043;
+        }
+        .btn-secondary {
+            background-color: #21262d;
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+        }
+        .btn-secondary:hover {
+            background-color: #30363d;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>TRABAJO PRÁCTICO N.º 1: SCRIPT PARA POWERSHELL</h1>
+        
+        <div class="metadata">
+            <div>
+                <p><strong>Módulo:</strong> Programación para Seguridad Informática</p>
+                <p><strong>Docente:</strong> Lic. y Prof. Carlos Pacheco</p>
+            </div>
+            <div>
+                <p><strong>Alumno:</strong> Cristian Edgardo Paz</p>
+            </div>
+        </div>
+
+        <p class="section-title">Descripción de la Actividad</p>
+        <p>Desarrollo de un script en PowerShell para consultar de forma automatizada la versión de PowerShell, la política de ejecución vigente, la información del sistema operativo y los datos generales del equipo mediante comandos del sistema[cite: 1].</p>
+
+        <p class="section-title">Comandos Principales Utilizados</p>
+        <ul>
+            <li><code>$PSVersionTable</code>: Información general de PowerShell[cite: 1].</li>
+            <li><code>$PSVersionTable.PSVersion</code>: Versión exacta instalada[cite: 1].</li>
+            <li><code>Get-ExecutionPolicy</code>: Política de ejecución actual del entorno[cite: 1].</li>
+            <li><code>Get-CimInstance Win32_OperatingSystem</code>: Información detallada del sistema operativo[cite: 1].</li>
+            <li><code>cmd.exe /c systeminfo</code>: Información general y extendida del equipo mediante CMD[cite: 1].</li>
+        </ul>
+
+        <div class="btn-container">
+            <a href="https://github.com/crissed23/TRABAJO-PRACTICO-01-Programaci-n-para-Seguridad-Inform-tica---2026/commit/45d62b2fca0eb26628b1e1d44ba109725a80f69d" target="_blank" class="btn">Ver Commit en GitHub</a>
+            <a href="https://github.com/crissed23" target="_blank" class="btn btn-secondary">Repositorio Principal</a>
+        </div>
+    </div>
+
+</body>
+</html>
